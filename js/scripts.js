@@ -9,24 +9,29 @@ $(document).ready(function() {
 
     groceries.push(listItem);
 
-    console.log(groceries);
+    // console.log(groceries);
+    //
+    // console.log(groceries.sort());
 
-    console.log(groceries.sort());
+    // if (listItem === "") {
+    //     console.log("Whoops! Enter an item");
+    // } else if (groceries.length >= 4) {
+    //
+    $("ul.grocery-list li").remove();
 
-    if (listItem === "") {
-        console.log("Whoops! Enter an item");
-    } else if (groceries.length >= 4) {
+        for(i = 0; i < groceries.length; i ++) {
+         $("ul.grocery-list").append("<li>" + groceries[i] + "</li>");
+          console.log(listItem);
+        }
 
-        $("ul.grocery-list li").remove();
+      // groceries.forEach(function(item) {
+      //   groceries.sort();
+      //   $("ul.grocery-list").append("<li>" + item.toUpperCase() + "</li>");
+      // });
 
-      groceries.forEach(function(item) {
-        groceries.sort();
-        $("ul.grocery-list").append("<li>" + item.toUpperCase() + "</li>");
-      });
-
-    } else {
-      console.log("Enter another item.");
-    }
+    // } else {
+    //   console.log("Enter another item.");
+    // }
 
     $(".listInput").val("");
 
